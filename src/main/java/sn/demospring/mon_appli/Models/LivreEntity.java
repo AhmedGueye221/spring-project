@@ -2,7 +2,10 @@ package sn.demospring.mon_appli.Models;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,9 +14,6 @@ import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Entity
-/*
- * L'annotation @Data de Lombok génère automatiquement les méthodes getters et les setters pour la classe.
- */
 @Data
 public class LivreEntity {
     @Id
@@ -24,8 +24,9 @@ public class LivreEntity {
     private String isbn;
     private LocalDate datePublication;
     private String genre;
-    
-    @ManyToOne
+
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "auteur_id")
     private AuteurEntity auteur;
 }

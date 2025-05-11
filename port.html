@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        header p {
+            color: #718096;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #ebf4ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: #4299e1;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #4299e1;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #3182ce;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nos Services Web</h1>
+            <p>Solutions numériques professionnelles pour tous vos besoins en ligne. Nous proposons des services adaptés à votre entreprise.</p>
+        </header>
+        
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Création de Site Web</h3>
+                <p>Des sites web modernes, responsives et optimisés pour tous les appareils. Parfaits pour présenter votre entreprise ou votre portfolio.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>E-Commerce</h3>
+                <p>Des boutiques en ligne complètes avec gestion des produits, panier d'achat et système de paiement sécurisé.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Applications Web</h3>
+                <p>Développement d'applications web interactives et personnalisées pour répondre aux besoins spécifiques de votre entreprise.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
